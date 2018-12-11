@@ -54,11 +54,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50vh;
   font-weight: bold;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 50vh;
+  min-height: 50vh;
+  -webkit-transform: translateY(-25vh);
+          transform: translateY(-25vh);
+}
+
+.las-vegas .sign-wrapper::after {
+  clear: both;
+  overflow: hidden;
 }
 
 .las-vegas .sign-content {
@@ -78,9 +83,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50vh;
   font-weight: bold;
-  top: -50px;
+  top: -4vw;
 }
 
 @-webkit-keyframes blinking-outline {
@@ -121,45 +125,45 @@ body {
 }
 
 .las-vegas .sign span {
-  height: 1vh;
-  border-top: 1vh dotted #FDF360;
+  height: 1vw;
+  border-top: 1vw dotted #FDF360;
   display: block;
   position: absolute;
 }
 
 @-webkit-keyframes span1 {
   50% {
-    right: -1vh;
+    right: -1vw;
   }
 }
 
 @keyframes span1 {
   50% {
-    right: -1vh;
+    right: -1vw;
   }
 }
 
 @-webkit-keyframes span2 {
   50% {
-    right: 1vh;
+    right: 1vw;
   }
 }
 
 @keyframes span2 {
   50% {
-    right: 1vh;
+    right: 1vw;
   }
 }
 
 @-webkit-keyframes span3 {
   50% {
-    top: calc(50% - 1vh);
+    top: calc(50% - 1vw);
   }
 }
 
 @keyframes span3 {
   50% {
-    top: calc(50% - 1vh);
+    top: calc(50% - 1vw);
   }
 }
 
@@ -179,7 +183,7 @@ body {
   width: 100%;
   -webkit-animation: span1 1s infinite step-end;
           animation: span1 1s infinite step-end;
-  top: -1vh;
+  top: -1vw;
   right: 0;
 }
 
@@ -198,7 +202,7 @@ body {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   top: 50%;
-  right: calc((100% + 1vh)/2);
+  right: calc((100% + 1vw)/2);
 }
 
 .las-vegas .sign span:nth-child(4) {
@@ -207,8 +211,8 @@ body {
           animation: span4 1s infinite step-end;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  top: calc(50% - 1vh);
-  left: calc((100% + 1vh)/2);
+  top: calc(50% - 1vw);
+  left: calc((100% + 1vw)/2);
 }
 
 .las-vegas .circle {
@@ -221,14 +225,14 @@ body {
 
 .las-vegas .circle > span {
   color: #ED3833;
-  border: 2px solid lightblue;
+  border: 0.2vw solid lightblue;
   background-color: white;
-  border-radius: 50px;
-  width: 70px;
+  border-radius: 6vw;
+  width: 9vw;
+  height: 9vw;
+  font-size: 6vw;
+  line-height: 1;
   text-transform: uppercase;
-  height: 70px;
-  font-size: 40px;
-  line-height: 40px;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,7 +248,7 @@ body {
 
 .las-vegas .script {
   color: #2F88CB;
-  font-size: 20px;
+  font-size: 3vw;
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,7 +267,7 @@ body {
 
 .las-vegas .script > span {
   text-transform: capitalize;
-  font-size: 40px;
+  font-size: 5vw;
   font-weight: bold;
   font-family: cursive;
   font-style: italic;
@@ -277,29 +281,29 @@ body {
 
 .las-vegas .city {
   color: #2F88CB;
-  font-size: 20px;
+  font-size: 3vw;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .las-vegas .post {
-  height: 90vh;
-  position: absolute;
-  bottom: 0;
-  left: 27vw;
-  border-top: 20px solid #40A0BE;
+  top: 10vh;
+  height: 100vh;
+  left: 20vw;
   width: 20vw;
-  border-left: 20px solid #40A0BE;
-  border-right: 20px solid #40A0BE;
+  position: absolute;
+  border-top: 2vw solid #40A0BE;
+  border-left: 2vw solid #40A0BE;
+  border-right: 2vw solid #40A0BE;
   z-index: -1;
 }
 
 .las-vegas .star {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid red;
+  border-left: 3vw solid transparent;
+  border-right: 3vw solid transparent;
+  border-bottom: 7vw solid red;
   position: relative;
 }
 
