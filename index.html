@@ -1,28 +1,39 @@
-<html>
+<html class="las-vegas">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="./main.css">
   <title>Kari Bronson</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body{
-      height: 100vh;
-      width: 100vw;
-      background: center center no-repeat url('./kari-bronson-alphagetti.jpg');
-      background-size: cover;
-      overflow: hidden;
-    }
-
-    @media only screen and (max-width: 800px) {
-  body {
-    background-position-x: 63%;
-  }
-}
-
-  </style>
 </head>
 <body>
+  <div class="post">
+    <div class="star"></div>
+  </div>
+  <div class="sign-wrapper">
+  <div class="sign">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="sign-content">
+    <div class="circle">welcome</div>
+    <div class="script">to<span>fabulous</span></div>
+    <div class="heading">KariBronson.com</div>
+    <div class="city">Edmonton</div>
+</div>
+</div>
 </body>
+<script type="text/javascript">
+  (()=> {
+    var circle = document.getElementsByClassName("circle");
+    var circleText = circle[0].innerHTML;
+    circle[0].innerHTML = "";
+    for(var i = 0; i < circleText.length; i++) {
+        var wrapper = document.createElement("span");
+        wrapper.innerHTML = circleText[i];
+        circle[0].appendChild(wrapper);
+    };
+  })()
+</script>
 </html>

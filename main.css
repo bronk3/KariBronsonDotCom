@@ -1,0 +1,317 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#99fdeb), color-stop(#358AAB), to(#2c6fb3));
+  background-image: linear-gradient(to bottom right, #99fdeb, #358AAB, #2c6fb3);
+}
+
+.typing body {
+  background-color: black;
+  color: #a3a3a3;
+}
+
+.typing h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.typing p {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.sketti body {
+  height: 100vh;
+  width: 100vw;
+  background: center center no-repeat url("./kari-bronson-alphagetti.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  .sketti body {
+    background-position-x: 63%;
+  }
+}
+
+.las-vegas .sign-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50vh;
+  font-weight: bold;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.las-vegas .sign-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50vh;
+  font-weight: bold;
+  top: -50px;
+}
+
+@-webkit-keyframes blinking-outline {
+  50% {
+    outline-color: transparent;
+  }
+}
+
+@keyframes blinking-outline {
+  50% {
+    outline-color: transparent;
+  }
+}
+
+@-webkit-keyframes blinking-border {
+  50% {
+    border-color: #FDF360;
+  }
+}
+
+@keyframes blinking-border {
+  50% {
+    border-color: #FDF360;
+  }
+}
+
+.las-vegas .sign {
+  -webkit-transform: skewY(-27deg) skewX(45deg);
+          transform: skewY(-27deg) skewX(45deg);
+  position: absolute;
+  border-radius: 1vw;
+  height: 0;
+  padding-bottom: 50%;
+  width: 50%;
+  left: 25%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.las-vegas .sign span {
+  height: 1vh;
+  border-top: 1vh dotted #FDF360;
+  display: block;
+  position: absolute;
+}
+
+@-webkit-keyframes span1 {
+  50% {
+    right: -1vh;
+  }
+}
+
+@keyframes span1 {
+  50% {
+    right: -1vh;
+  }
+}
+
+@-webkit-keyframes span2 {
+  50% {
+    right: 1vh;
+  }
+}
+
+@keyframes span2 {
+  50% {
+    right: 1vh;
+  }
+}
+
+@-webkit-keyframes span3 {
+  50% {
+    top: calc(50% - 1vh);
+  }
+}
+
+@keyframes span3 {
+  50% {
+    top: calc(50% - 1vh);
+  }
+}
+
+@-webkit-keyframes span4 {
+  50% {
+    top: 50%;
+  }
+}
+
+@keyframes span4 {
+  50% {
+    top: 50%;
+  }
+}
+
+.las-vegas .sign span:nth-child(1) {
+  width: 100%;
+  -webkit-animation: span1 1s infinite step-end;
+          animation: span1 1s infinite step-end;
+  top: -1vh;
+  right: 0;
+}
+
+.las-vegas .sign span:nth-child(2) {
+  width: 100%;
+  -webkit-animation: span2 1s infinite step-end;
+          animation: span2 1s infinite step-end;
+  top: 100%;
+  right: 0;
+}
+
+.las-vegas .sign span:nth-child(3) {
+  width: 100%;
+  -webkit-animation: span3 1s infinite step-end;
+          animation: span3 1s infinite step-end;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 50%;
+  right: calc((100% + 1vh)/2);
+}
+
+.las-vegas .sign span:nth-child(4) {
+  width: 100%;
+  -webkit-animation: span4 1s infinite step-end;
+          animation: span4 1s infinite step-end;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: calc(50% - 1vh);
+  left: calc((100% + 1vh)/2);
+}
+
+.las-vegas .circle {
+  z-index: 10;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.las-vegas .circle > span {
+  color: #ED3833;
+  border: 2px solid lightblue;
+  background-color: white;
+  border-radius: 50px;
+  width: 70px;
+  text-transform: uppercase;
+  height: 70px;
+  font-size: 40px;
+  line-height: 40px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: sans-serif;
+}
+
+.las-vegas .script {
+  color: #2F88CB;
+  font-size: 20px;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: lighter;
+  -webkit-transform: scale(2, 0.7);
+          transform: scale(2, 0.7);
+}
+
+.las-vegas .script > span {
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: cursive;
+  font-style: italic;
+}
+
+.las-vegas .heading {
+  color: #ED3833;
+  font-size: 8vw;
+  text-transform: uppercase;
+}
+
+.las-vegas .city {
+  color: #2F88CB;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.las-vegas .post {
+  height: 90vh;
+  position: absolute;
+  bottom: 0;
+  left: 27vw;
+  border-top: 20px solid #40A0BE;
+  width: 20vw;
+  border-left: 20px solid #40A0BE;
+  border-right: 20px solid #40A0BE;
+  z-index: -1;
+}
+
+.las-vegas .star {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  position: relative;
+}
+
+.las-vegas .star:after {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: -50px;
+}
+/*# sourceMappingURL=main.css.map */

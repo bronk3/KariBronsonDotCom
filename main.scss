@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+  }
+
+ $sky: rgb(153, 253, 235);
+ $sky2: #2c6fb3;
+ $sky3: #358AAB;
+ $post: #40A0BE;
+ $sign-background: #fff;
+ $lights: #FDF360;
+
+
+
+  body {
+    background-image: linear-gradient(to bottom right, $sky, $sky3, $sky2);
+  }
+
+.typing {
+      body{
+        background-color: black;
+        color: #a3a3a3;
+      }
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        font-family: monospace;
+        font-size: 20px;
+      }
+}
+
+.sketti {
+      body{
+        height: 100vh;
+        width: 100vw;
+        background: center center no-repeat url('./kari-bronson-alphagetti.jpg');
+        background-size: cover;
+        overflow: hidden;
+      }
+  
+      @media only screen and (max-width: 800px) {
+    body {
+      background-position-x: 63%;
+    }
+  }
+}
+
+.las-vegas {
+
+    .sign-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        font-weight: bold;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+
+    .sign-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        font-weight: bold;
+        top: -50px;
+    }
+
+    @keyframes blinking-outline {
+        50% {
+            outline-color: transparent;
+        }
+    }
+
+    @keyframes blinking-border {
+        50% {
+            border-color: $lights;
+        }
+    }
+
+    $light-size: 1vh;
+    $light-speed: 1s;
+
+    $sign-height: 50%;
+    $sign-width: 50%;
+
+
+    //https://codepen.io/techniq/pen/gzyHI
+
+    
+    .sign {
+        transform: skewY(-27deg) skewX(45deg);
+        position: absolute;
+        border-radius: 1vw;
+        height: 0;
+        padding-bottom: $sign-height;
+        width: $sign-width;
+        left: $sign-width/2;
+        background-color:  $sign-background;
+        z-index: -1;
+
+        span {
+            height: $light-size;
+            border-top: $light-size dotted $lights;
+            display: block;
+            position: absolute;
+
+        }
+          @keyframes span1 {
+            50% {
+                right: -$light-size;
+            }
+          }
+          @keyframes span2 {
+            50% {
+                right: $light-size;
+            }
+          }
+
+          @keyframes span3 {
+            50% {
+                top: calc(50% - #{$light-size});
+            }
+          }
+
+          @keyframes span4 {
+            50% {
+                top: 50%;
+            }
+          }
+
+        span:nth-child(1) {
+            width: 100%;
+            animation: span1 $light-speed infinite step-end;
+            top: -$light-size;
+            right: 0;
+        }
+        span:nth-child(2) {
+
+            width: 100%;
+            animation: span2 $light-speed infinite step-end;
+            top: 100%;
+            right: 0;
+        }
+
+        span:nth-child(3) {
+            width: 100%;
+            animation: span3 $light-speed infinite step-end;
+            transform: rotate(90deg);
+            top: 50%;
+            right: calc((100% + #{$light-size})/2);
+        }
+        span:nth-child(4) {
+            width: 100%;
+            animation: span4 $light-speed infinite step-end;
+            transform: rotate(90deg);
+            top: calc(50% - #{$light-size});
+            left: calc((100% + #{$light-size})/2);
+        }
+    }
+
+    .circle {
+        z-index: 10;
+        position: relative;
+        display: flex;
+        > span {
+            color: #ED3833;
+            border: 2px solid lightblue;
+            background-color: white;
+            border-radius: 50px;
+            width: 70px;
+            text-transform: uppercase;
+            height: 70px;
+            font-size: 40px;
+            line-height: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+    }
+
+    .script {
+        color: #2F88CB;
+        font-size: 20px;
+        line-height: 1;   
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        align-items: center;
+        font-weight: lighter;
+        transform: scale(2, 0.7);  
+     
+        > span {
+            text-transform: capitalize;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: cursive;
+            font-style: italic;
+        }
+    }
+
+    .heading {
+        color: #ED3833;
+        font-size: 8vw;
+        text-transform: uppercase;
+    }
+    .city {
+        color: #2F88CB;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .post {
+        height: 90vh;
+        position: absolute;
+        bottom: 0;
+        left: 27vw;
+        border-top: 20px solid $post;
+        width: 20vw;
+        border-left: 20px solid $post;
+        border-right: 20px solid $post;
+        z-index: -1;
+    }
+
+    .star {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+        position: relative;
+      
+      &:after {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid red;
+        position: absolute;
+        content: "";
+        top: 30px;
+        left: -50px;
+      }
+    }
+}
