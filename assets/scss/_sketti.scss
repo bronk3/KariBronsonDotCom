@@ -1,0 +1,15 @@
+.sketti {
+      body{
+        height: 100vh;
+        width: 100vw;
+        background: center center no-repeat url('../images/kari-bronson-alphagetti.jpg');
+        background-size: cover;
+        overflow: hidden;
+      }
+  
+      @media only screen and (max-width: 800px) {
+    body {
+      background-position-x: 63%;
+    }
+  }
+}

@@ -3,9 +3,20 @@
           box-sizing: border-box;
 }
 
-body {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#99fdeb), color-stop(#358AAB), to(#2c6fb3));
-  background-image: linear-gradient(to bottom right, #99fdeb, #358AAB, #2c6fb3);
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bubble {
+  font-family: 'Fredoka One', cursive;
 }
 
 .typing body {
@@ -26,7 +37,7 @@ body {
 .sketti body {
   height: 100vh;
   width: 100vw;
-  background: center center no-repeat url("./kari-bronson-alphagetti.jpg");
+  background: center center no-repeat url("../images/kari-bronson-alphagetti.jpg");
   background-size: cover;
   overflow: hidden;
 }
@@ -35,6 +46,11 @@ body {
   .sketti body {
     background-position-x: 63%;
   }
+}
+
+.las-vegas body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#99fdeb), color-stop(#358AAB), to(#2c6fb3));
+  background-image: linear-gradient(to bottom right, #99fdeb, #358AAB, #2c6fb3);
 }
 
 .las-vegas .sign-wrapper {
@@ -317,5 +333,161 @@ body {
   content: "";
   top: 30px;
   left: -50px;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  color: #73cce7;
+  font-size: 9vw;
+  text-align: center;
+  margin: 4vh 0 1vh 0;
+}
+
+h2 {
+  font-family: 'Fredoka One', cursive;
+  color: #73cce7;
+  font-size: 4vh;
+  text-align: center;
+  margin: 4vh 0 1vh 0;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #5dc6df;
+  padding: 0 10vw;
+  font-size: 2vw;
+  line-height: 1.5;
+}
+
+small {
+  color: #3cc0d7;
+  display: block;
+  font-size: 1vw;
+  padding: 0 10vw;
+  line-height: 1.7;
+}
+
+.cute-blue a {
+  color: #73cce7;
+}
+
+.cute-blue a:active, .cute-blue a:visited, .cute-blue a:hover {
+  color: #73cce7;
+}
+
+.cute-body {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  -ms-grid-columns: 10vw 40vw 40vw 10vw;
+      grid-template-columns: 10vw 40vw 40vw 10vw;
+  -ms-grid-rows: 10vh 80vh 10vh;
+      grid-template-rows: 10vh 80vh 10vh;
+      grid-template-areas: "header header header sidebar2" "sidebar1 main main sidebar2" "sidebar1 footer footer footer";
+}
+
+.cute-body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background: url(../images/blue-bg-white-dots.png) repeat center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cute-body a {
+  text-decoration: none;
+}
+
+.cute-body a:active, .cute-body a:visited, .cute-body a:hover {
+  text-decoration: none;
+}
+
+.cute-body .contact-me-link {
+  font-family: 'Fredoka One', cursive;
+  color: #73cce7;
+  font-size: 8vh;
+  text-align: center;
+  padding: 4vw;
+  overflow-wrap: break-word;
+  display: block;
+  width: 100%;
+}
+
+.cute-body nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 15vw;
+  margin-right: 5vw;
+}
+
+.cute-body nav a {
+  font-family: 'Fredoka One', cursive;
+  color: #73cce7;
+  font-size: 4vh;
+  margin-left: 1vw;
+}
+
+.cute-body main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  background-color: #F1F7F7;
+  overflow-y: scroll;
+}
+
+.cute-body aside:first-of-type {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar1;
+  background: url(../images/blue-strips.png) repeat center center;
+}
+
+.cute-body aside:nth-of-type(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: sidebar2;
+  background: url(../images/blue-strips.png) repeat center center;
+}
+
+.cute-body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2vh 0;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background: url(../images/blue-bg-white-dots.png) repeat center center;
 }
 /*# sourceMappingURL=main.css.map */
