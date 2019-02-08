@@ -1,53 +1,11 @@
-* {
-    box-sizing: border-box;
-  }
 
- $sky: rgb(153, 253, 235);
- $sky2: #2c6fb3;
- $sky3: #358AAB;
- $post: #40A0BE;
- $sign-background: #fff;
- $lights: #FDF360;
-
-
-
-  body {
-    background-image: linear-gradient(to bottom right, $sky, $sky3, $sky2);
-  }
-
-.typing {
-      body{
-        background-color: black;
-        color: #a3a3a3;
-      }
-      h1 {
-        padding: 0;
-        margin: 0;
-      }
-      p {
-        font-family: monospace;
-        font-size: 20px;
-      }
-}
-
-.sketti {
-      body{
-        height: 100vh;
-        width: 100vw;
-        background: center center no-repeat url('./kari-bronson-alphagetti.jpg');
-        background-size: cover;
-        overflow: hidden;
-      }
-  
-      @media only screen and (max-width: 800px) {
-    body {
-      background-position-x: 63%;
-    }
-  }
-}
 
 .las-vegas {
 
+    body {
+        background-image: linear-gradient(to bottom right, $sky, $sky3, $sky2);
+      }
+      
     .sign-wrapper {
         position: relative;
         display: flex;

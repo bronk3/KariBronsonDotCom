@@ -1,0 +1,21 @@
+$sky: rgb(153, 253, 235);
+$sky2: #2c6fb3;
+$sky3: #358AAB;
+$post: #40A0BE;
+$sign-background: #fff;
+$lights: #FDF360;
+
+* {
+    box-sizing: border-box;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bubble {
+
+    font-family: 'Fredoka One', cursive;
+  }
